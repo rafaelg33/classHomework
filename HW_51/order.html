@@ -14,7 +14,7 @@
 <body >
 <nav  class="navbar navbar-default navbar-fixed-top">
 
-<div class="container">
+<div class="container ">
   
 <div class="navbar-header">
   <a href="index.html" class="navbar-brand">Home</a>
@@ -24,6 +24,7 @@
              <li><a href="todaysspecials.html">today's specials</a></li>
              <li><a href="dessert.html">Desserts</a></li>
         </ul>
+      
 
         <ul  class="nav navbar-nav navbar-right ">
              <li><a href="order.html">Order Now</a></li>
@@ -31,18 +32,30 @@
         </ul>
         </div>
 </nav>
-<div class="content">
 
-	  <form action="" method="post">
-  <fieldset>
-    <legend>Free Delivery</legend>
-     <label for="GET-name">First Name:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
-    
-  </fieldset>
+
+
+<div class="content ">
+<div id="photo">
+	  <form action="order.php" method="post">
+    <fieldset>
+      <h2>Free delivery over $100.00</h2>
+
+      
+   <label>First Name <input type="text" name="firstName" /></label>
+   <label>Last Name <input type="text" name="lastName" /></label></br>
+  <label>Address <input type="text" name="address" size="50px"/></label>
+   </br>
+   <label>City <input type="text" name="city" /></label>
+   <label>State <input type="text" name="state" /></label>
+   <label>Zip <input type="number" name="zip" /></label></br>
+
+ <textarea name="orderItem" rows="10" cols="50">Order Items</textarea></br>
+   <button type="submit">Submit</button>
+     </fieldset>
+  
 </form>
-          
+  </div>        
 </div>
 
 
