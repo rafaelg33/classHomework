@@ -1,0 +1,14 @@
+body { padding-top: 50px; 
+	padding-bottom: 70px; 
+
+}
+#white{
+	color: white;
+}
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: red;
+   
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: red;
+}
