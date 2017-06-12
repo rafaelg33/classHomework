@@ -61,9 +61,9 @@ a:hover {
 }
 
 .item{
-     display: inline-block;
+    float: left;
     vertical-align: top;
-    max-width: 27%;
+    max-width: 33.33%;
     padding-top: 15px ;
     padding-left: 5px;
     padding-right: 5px;
