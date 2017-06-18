@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="restaurant.css">
+  <link rel="icon" href="grill.jpeg">
+
+  <title>Goldberg Grill</title>
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container ">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+        <a class="navbar-brand" href="index.html">Home</a>
+      </div>
+
+
+
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="todaysspecials.html">today's specials</a></li>
+          <li><a href="dessert.html">Desserts</a></li>
+           <li><a href="chefs.html">Our Staff</a></li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right ">
+          <li id="active"><a href="order.html">Order Now</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+    <div class="jumbotron">
+
+
+      <form class="form-horizontal" action="order.php" method="post">
+
+
+        <h2>Free delivery over $100.00</h2>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="firstname">First Name:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname">
+          </div>
+
+          <label class="control-label col-sm-2" for="lastname">Last Name:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address" class="col-sm-2 control-label">Address:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="address" placeholder="Address" name="address">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="city" class="col-sm-2 control-label">City:</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="city" placeholder="city" name="city">
+          </div>
+
+          <label for="zip" class="col-sm-1 control-label">Zip:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="zip" placeholder="zip" name="zip">
+          </div>
+
+          <label for="state" class="col-sm-1 control-label">State:</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="state" placeholder="state" name="state">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="order" name="order"> Enter Order:</label>
+          <textarea class="form-control" rows="5" id="order"></textarea>
+        </div>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

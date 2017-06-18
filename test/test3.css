@@ -61,15 +61,14 @@ a:hover {
 }
 
 .item{
-    float: left;
+    display: inline-block;
     vertical-align: top;
-    max-width: 33.33%;
+    width: 80%;
     padding-top: 15px ;
     padding-left: 5px;
     padding-right: 5px;
-    margin: 0 auto;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: justify;
 }
 
@@ -80,23 +79,23 @@ a:hover {
 }
 .item img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%
-    height:auto;
+    width: 70%;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (min-width: 1000px){
 
                .item{
+             display: inline-block;
             align-items: center;
-
-            max-width: 80%;
-            padding-top: 15px ;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin: 0 auto;
-            text-align: justify;
+            max-width: 28%;
+             vertical-align: top;
+    
+    padding-top: 15px ;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
         }
 
         .item h4{
