@@ -1,6 +1,6 @@
 <?php
     $cs = "mysql:host=localhost;dbname=students";
-    $user = "test";
+    $user = "test2";
     $password = 'pass';
     $nameArr[] = "";
     try {
@@ -8,14 +8,30 @@
         $db = new PDO($cs, $user, $password, $options);
         
         $query = "SELECT name, grade FROM grades";
-
         $results = $db->query($query);
-
         $marks = $results->fetchAll(PDO::FETCH_COLUMN|PDO::FETCH_GROUP);
-        print_r($marks);
+        
+
+
+        if(isset($GET["delete"])){
+            $delete = $_GET["delete"];
+            echo $delete;
+        }
+       
+       if(isset($_GET["delete"])){
+            $delete = $_GET["delete"];
+           $query = "DELETE FROM grades WHERE name =  :name";
+             
+              $stmt = $db->prepare($query); 
+              $stmt->bindParam('name', $delete);  
+              $stmt ->execute();
+          
+              
+        }
 
       
-        
+       
+     
  
     
         
@@ -23,6 +39,8 @@
         $error = "Something went wrong " . $e->getMessage();
      
     }
+
+     
 ?>
 
 
@@ -53,17 +71,18 @@
       echo '<tr>';
      foreach($marks as $key => $val){
         echo '<tr>';
+         
+          echo "<td> $key </td>";
+                foreach($val as $key1 => $val1){
+                        echo "<td> $val1 </td>";
+                }
+             
 
-          echo "<td> '$key' </td>";
 
-         foreach($val as $key1 => $val1){
-                   echo "<td> '$val1' </td>";
-         }
+          echo"<td><form ><input type=\"hidden\" name=\"delete\" value=\"$key\"> <input type=\"submit\" value=\"submit\" > </form></td>"  ;
       
-
          echo '</tr>';
      }
-
       echo '</tr>';
  
   ?>
