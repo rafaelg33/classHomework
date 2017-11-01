@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    background-color: gray;
+    margin:0;
+    padding: 15px;
+    text-align: center;
+
+}
+p{
+    margin: 25px;
+}
